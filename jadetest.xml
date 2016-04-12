@@ -6,14 +6,37 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="3">
+      <block type="oled_cleardisplay" id="117">
         <next>
-          <block type="robot_delay" id="4" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="5">
-                <field name="NUM">3949</field>
+          <block type="oled_setcursor" id="126" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="127">
+                <field name="NUM">10</field>
               </block>
             </value>
+            <value name="STARTY">
+              <block type="math_number" id="128">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="158">
+                <field name="TEXT">LLAMA POWER</field>
+                <next>
+                  <block type="movement_forward" id="3">
+                    <next>
+                      <block type="robot_delay" id="4" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="5">
+                            <field name="NUM">3949</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
